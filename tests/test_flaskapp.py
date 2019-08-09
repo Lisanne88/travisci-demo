@@ -18,6 +18,12 @@ class FlaskTestCase(unittest.TestCase):
         resp = json.loads(response.data.decode())
         self.assertEqual(resp['answer'],35,'Multiply endpoint failed known answer 7*5 = 35')
 
+    def test_touppercase(self):
+        response = self.app.get('/touppercase?s=pizza')
+        return_value = response.data.decode()
+        self.assertEqual(return_value,"PIZZA2","pizza to upper must be equal to PIZZA")
+
+
 
     # TODO DEFINE TWO MORE TESTS ON THE END POINTS
 

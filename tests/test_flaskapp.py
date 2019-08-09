@@ -21,7 +21,7 @@ class FlaskTestCase(unittest.TestCase):
     def test_touppercase(self):
         response = self.app.get('/touppercase?s=pizza')
         return_value = response.data.decode()
-        self.assertEqual(return_value,"PIZZA2","pizza to upper must be equal to PIZZA")
+        self.assertEqual(return_value,"PIZZA","pizza to upper must be equal to PIZZA")
 
 
 
